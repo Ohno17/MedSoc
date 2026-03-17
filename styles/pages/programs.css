@@ -22,39 +22,19 @@
     margin: 0;
 }
 
-/* Layout Wrapper */
-main > div   {
+main > div {
     display: flex;
-    flex-direction: row-reverse; /* Sidebar on the right, content on the left */
+    flex-direction: row-reverse;
     max-width: 1200px;
     margin: 0 auto;
     gap: 30px;
     padding: 20px;
 }
 
-/* Sidebar Styling */
-.scholarship-sidebar {
-    flex: 0 0 300px; /* Fixed width of 300px */
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    height: fit-content;
-    border: 1px solid #ddd;
-}
-
-.scholarship-sidebar h2 {
-    font-size: 1.4rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    text-align: center;
-    border-bottom: 2px solid #2980b9;
-    padding-bottom: 10px;
-}
-
 .sidebar-item {
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 1px dashed #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
 .sidebar-item:last-child {
@@ -72,7 +52,7 @@ main > div   {
     margin: 3px 0;
 }
 
-.sidebar-item a {
+.sidebar-item a, .program-link {
     display: inline-block;
     margin-top: 8px;
     font-size: 0.85rem;
@@ -86,14 +66,8 @@ main > div   {
 }
 
 @media (max-width: 900px) {
-    .content-wrapper {
+    main > div {
         flex-direction: column;
-    }
-    
-    .scholarship-sidebar {
-        flex: none;
-        width: 100%;
-        box-sizing: border-box;
     }
 }
 
@@ -104,11 +78,8 @@ main > div   {
 }
 
 .program-card {
-    background: #ffffff;
-    border-radius: 12px;
     padding: 30px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     border-left: 5px solid #2c3e50;
 }
 
@@ -129,15 +100,6 @@ main > div   {
 .program-card strong {
     color: #272552;
     font-weight: 600;
-}
-
-.program-link {
-    display: inline-block;
-    margin-top: 8px;
-    font-size: 0.85rem;
-    color: #2980b9;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 .program-link:hover {
